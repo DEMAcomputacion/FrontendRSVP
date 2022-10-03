@@ -16,7 +16,7 @@ const Rsvp = () => {
     }, [])
     
     const contadorInvitados = () => {
-        if(rsvp.listadoRsvp !== {}){
+        if(rsvp.listadoRsvp.length !== 0){
             const list = rsvp.listadoRsvp
             const listadoFiltrado = list.filter(elem => elem.asistencia === true)
             return listadoFiltrado.length + (listadoFiltrado.reduce((sum, valor) => sum + valor.nroInvitados, 0));
@@ -35,12 +35,12 @@ const Rsvp = () => {
                     <h3>Lista de Invitados!</h3>
                 </div>
                 <div className="col-12 d-flex justify-content-center">
-                    <h5>Hasta ahora hay confirmados <b>{contadorInvitados()}</b> invitados!</h5>
+                    <h5>Hasta ahora hay confirmados <b>{/*contadorInvitados()*/}</b> invitados!</h5>
                 </div>
             </div>
             <div className="row pt-2">
                 <div className="col-12 scroll">
-                    {rsvp.listadoRsvp.map((elem) => (
+                    {(rsvp.listadoRsvp || [1,2]).map((elem) => (
                         <div className="container justify-content-center">
                             <div className="row border p-3">
                                 <div className="col-10">
