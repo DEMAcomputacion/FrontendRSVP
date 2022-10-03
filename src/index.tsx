@@ -8,7 +8,7 @@ import { Provider } from 'react-redux'
 import store from './app/store';
 
 import './index.css';
-import 'bootswatch/dist/minty/bootstrap.min.css'
+import 'bootswatch/dist/united/bootstrap.min.css'
 
 
 const root = ReactDOM.createRoot(

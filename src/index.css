@@ -1,5 +1,6 @@
 .image-fluid {
-  width: 50px;
+  width: 40px;
+  margin: 0 auto;
 }
 
 .scroll {

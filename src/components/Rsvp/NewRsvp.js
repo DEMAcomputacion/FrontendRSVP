@@ -51,7 +51,7 @@ const NewRsvp = () => {
                             </div>
                         <div className="form-group m-4">
                             <label>Cantidad de invitados que asistirán contigo:</label>
-                            <input type="number" id="nroInvitados" min="0" onChange={handleInputs} value={rsvpDatos.nroInvitados} />
+                            <input type="number" id="nroInvitados" min="0" max="20" size="3" disabled={!rsvpDatos.asistencia} onChange={handleInputs} value={rsvpDatos.nroInvitados} />
                         </div>
                         <div className="form-group m-4">
                             <label htmlFor="comentario">Deja un comentario:</label>
